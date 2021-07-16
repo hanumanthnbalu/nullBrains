@@ -213,6 +213,10 @@ nav {
     align-items: center;
 }
 
+.pos-rel {
+    position: relative;
+}
+
 .features {
     padding: 2rem 0px;
     display: grid;
@@ -233,6 +237,29 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     align-items: center;
+}
+
+.productivity ul li {
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.productivity ul li::before {
+    content: "\fa253";
+    position: absolute;
+    display: flex;
+    color: #000;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
 }
 
 .company-logo {
@@ -290,6 +317,10 @@ img {
     padding: 2rem 1rem 1rem;
 }
 
+.ml-auto {
+    margin-left: auto !important;
+}
+
 .blog-description {
     padding: 2rem;
     color: #fff;
@@ -309,4 +340,63 @@ img {
 
 footer {
     margin-top: 4rem;
+}
+
+.collapse:not(.show) {
+    display: none !important;
+}
+
+.nav-grid {
+    display: grid;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-collapse {
+        flex-direction: column;
+    }
+    .ml-auto {
+        margin: unset !important;
+    }
+    .btn-green {
+        right: -30px;
+    }
+    /* .navbar-collapse {
+        padding: 1rem;
+    } */
+    .productivity {
+        margin-bottom: 2rem;
+    }
+    .navbar-nav {
+        justify-content: center;
+        flex-direction: row !important;
+        gap: 15px;
+        margin-bottom: 15px !important;
+        align-items: center;
+        list-style: none;
+    }
+    .navbar-collapse .d-flex {
+        justify-content: center;
+    }
+    .navbar-toggler {
+        float: right;
+    }
+    .btn-light {
+        top: 71%;
+    }
+    .blog-btn-light {
+        top: 63%;
+    }
+    .logos, .features, .teams {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs, .productivity {
+        flex-direction: column;
+    }
+    .main-sub-heading {
+        column-count: unset;
+    }
+    .footer-links {
+        padding: 0;
+        flex-direction: row;
+    }
 }
